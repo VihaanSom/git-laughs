@@ -62,3 +62,7 @@ Your coworkers stage an intervention.
 Your hackathon judges laugh harder at your commits than your project.
 
 You get addicted and start committing code just to hear the laugh track.
+
+## ⚡️ Code documentation 
+
+![Documentation](code_documentation.png)
