@@ -1,0 +1,37 @@
+#!/bin/sh
+# Cross-platform Git hook: play sitcom laugh track after commit
+
+# Path to laugh file inside repo
+SOUND_FILE="$(git rev-parse --show-toplevel)/sounds/laugh.wav"
+
+# Check if file exists
+if [ ! -f "$SOUND_FILE" ]; then
+  echo "😂 No laugh track found at $SOUND_FILE"
+  exit 0
+fi
+
+# macOS
+if command -v afplay >/dev/null 2>&1; then
+  afplay "$SOUND_FILE" &
+  exit 0
+fi
+
+# Linux (PulseAudio / ALSA)
+if command -v paplay >/dev/null 2>&1; then
+  paplay "$SOUND_FILE" &
+  exit 0
+elif command -v aplay >/dev/null 2>&1; then
+  aplay "$SOUND_FILE" &
+  exit 0
+fi
+
+# Windows (Git Bash / WSL, calls PowerShell)
+if command -v powershell.exe >/dev/null 2>&1; then
+  powershell.exe -Command \
+    "Add-Type -AssemblyName PresentationCore; " \
+    "\$player = New-Object System.Media.SoundPlayer('$SOUND_FILE'); " \
+    "\$player.PlaySync();"
+  exit 0
+fi
+
+echo "⚠️ No supported audio player found on this system."
