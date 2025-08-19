@@ -8,7 +8,7 @@ This repo contains a custom **git post-commit hook** that plays a classic 90’s
 Now, every time you commit, you’ll hear the sweet jingle of nostalgia—think laugh tracks, theme songs, and more!
 
 ## 📀 How It Works
-- You add a **pre-commit hook** to your repo.
+- You add a **post-commit hook** to your repo.
 - Every time you `git commit`, it plays a canned 90’s sitcom laugh track.
 - Boom. Instant morale boost. Developers nearby will either:
   - Think you’re a genius.
