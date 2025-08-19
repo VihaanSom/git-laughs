@@ -40,7 +40,7 @@ chmod +x /path/to/your/project/.git/hooks/post-commit
 
 ### 4. Add Your Favorite Sitcom Sounds
 
-Place your `.wav` or `.mp3` sound files in the `sounds/` folder (or wherever the script expects), and edit the script to point to your favorites if needed!
+Place your `.wav` sound files in the `sounds/` folder, and edit the script to point to your favorites if needed!
 
 ### 5. Commit and Enjoy!
 
@@ -53,5 +53,12 @@ Coding has never been this fun!
 
 ---
 
-> Because every commit deserves a laugh track.  
-> — The git-laughs Team
+🚨 Disclaimer
+
+We’re not responsible if:
+
+Your coworkers stage an intervention.
+
+Your hackathon judges laugh harder at your commits than your project.
+
+You get addicted and start committing code just to hear the laugh track.
