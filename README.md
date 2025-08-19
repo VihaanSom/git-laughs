@@ -1,59 +1,57 @@
-😂 Git Laughs Hook
+# 🎶 git-laughs: 90's Sitcom Post-Commit Hook 😂
 
-Ever feel like your commits are too serious?
-Tired of staring at dry terminal output?
-We fixed that.
+Welcome to **git-laughs** – specifically, the post-commit hook that brings 90’s sitcom vibes right to your terminal!
 
-Git Laughs is a simple Git hook that plays a classic sitcom laugh track whenever you commit.
-Yes, you heard that right—your code now comes with a laugh track.
+## What is This?
 
-🎭 What It Does
+This repo contains a custom **git post-commit hook** that plays a classic 90’s sitcom sound effect after every commit.  
+Now, every time you commit, you’ll hear the sweet jingle of nostalgia—think laugh tracks, theme songs, and more!
 
-Every time you git commit, your computer will chuckle with you.
+## 📀 How It Works
+- You add a **pre-commit hook** to your repo.
+- Every time you `git commit`, it plays a canned 90’s sitcom laugh track.
+- Boom. Instant morale boost. Developers nearby will either:
+  - Think you’re a genius.
+  - Think you’ve lost it.
+  - Both. (Most likely both.)
+## How to Use
 
-Even your worst code will sound like a hit 90’s sitcom.
+### 1. Clone the Repo
 
-Adds just enough chaos to brighten up those late-night commits.
-
-🛠 Setup
-
-Clone the repo:
-
-git clone https://github.com/your-username/git-laughs.git
+```bash
+git clone https://github.com/VihaanSom/git-laughs.git
 cd git-laughs
+```
 
+### 2. Install the Post-Commit Hook
 
-Copy the commit hook into your project’s .git/hooks/ folder:
+Copy the provided `post-commit` script into your local repo’s `.git/hooks` directory:
 
-cp commit-msg .git/hooks/
+```bash
+cp post-commit /path/to/your/project/.git/hooks/
+chmod +x /path/to/your/project/.git/hooks/post-commit
+```
 
+### 3. Ensure You Have Audio Support
 
-Make it executable:
+- **Linux:** Make sure you have `aplay`, `paplay`, or `mpv` installed.
+- **macOS:** `afplay` should work out of the box.
+- **Windows:** Use `PowerShell` or WSL with a compatible audio player.
 
-chmod +x .git/hooks/commit-msg
+### 4. Add Your Favorite Sitcom Sounds
 
+Place your `.wav` or `.mp3` sound files in the `sounds/` folder (or wherever the script expects), and edit the script to point to your favorites if needed!
 
-Add a laugh track:
+### 5. Commit and Enjoy!
 
-Place your favorite laugh .wav file in the project root.
+```bash
+git commit -m "My hilarious change"
+```
 
-Or, just record yourself cackling—it works.
+Listen for an iconic 90's sitcom sound after every commit.  
+Coding has never been this fun!
 
-If you don’t have one, drop any file in and rename it laugh.wav.
+---
 
-🔊 Usage
-
-Now, whenever you commit:
-
-git commit -m "fixed bug"
-
-
-Your terminal (and soul) will echo with laughter.
-
-⚠️ Notes
-
-Doesn’t guarantee funnier code.
-
-May cause coworkers to question your sanity.
-
-Works best if you commit often 😉.
+> Because every commit deserves a laugh track.  
+> — The git-laughs Team
